@@ -1,0 +1,103 @@
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.form-container {
+  background: #252525;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  border: 1px solid #8a2be2;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.close-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: #cccccc;
+  transition: fill 0.3s;
+}
+
+.close-btn:hover svg {
+  fill: #8a2be2;
+}
+
+h2 {
+  color: #8a2be2;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #cccccc;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #8a2be2;
+}
+
+.error {
+  color: #ff5252;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #8a2be2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #7a1be2;
+}
+
+.submit-btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+}

@@ -58,7 +58,8 @@
       <!-- Кнопки CTA -->
       <section class="cta-buttons">
           <button class="btn-primary">Уточнить детали у менеджера</button>
-          <button class="btn-secondary">Оставить заявку</button>
+  
+          <button (click)="set_open(true)" class="btn-secondary">Оставить заявку</button>
       </section>
     
       <app-carousel></app-carousel>
@@ -93,7 +94,7 @@
 </section>
 
 <section id="products" class="products-section">
-  <!-- Ваши карточки товаров -->
+  <!-- карточки товаров -->
 </section>
 
 <section id="advantages" class="advantages-section">
@@ -105,3 +106,5 @@
 </section>
 
 </div>
+
+<app-order-form *ngIf="is_open" (closeForm)="set_open(false)"></app-order-form>
