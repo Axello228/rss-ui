@@ -1,0 +1,89 @@
+.how-we-work {
+  background-color: #1a1a1a;
+  padding: 60px 20px;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  color: #8a2be2;
+  font-size: 3.5rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.work-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-step {
+  flex: 1;
+  min-width: 280px;
+  background: #252525;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
+}
+
+.step-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgba(138, 43, 226, 0.2);
+}
+
+.step-title {
+  color: #8a2be2;
+  font-size: 1.5rem;
+  margin: 10px 0 20px;
+  padding-left: 40px;
+}
+
+.step-description {
+  color: #cccccc;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Декоративный элемент */
+.work-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #8a2be2, #4b0082);
+}
+
+.step-title {
+  background: linear-gradient(90deg, rgba(138,43,226,0.1) 0%, rgba(138,43,226,0) 100%);
+  padding: 10px 20px;
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .work-step {
+    min-width: 100%;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}

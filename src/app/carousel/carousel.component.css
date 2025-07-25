@@ -1,0 +1,128 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background-color: #121212;
+}
+
+.carousel-slide {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.text-content {
+  flex: 1;
+  color: white;
+  z-index: 2;
+}
+
+.text-content h2 {
+  font-size: 3rem;
+  color: #8a2be2;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.text-content h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+.slide-image {
+  flex: 1;
+  max-height: 80%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.5));
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.indicators {
+  display: flex;
+  gap: 10px;
+}
+
+.indicators span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.indicators span.active {
+  background-color: #8a2be2;
+}
+
+button {
+  color: white;
+  background-color: rgba(138, 43, 226, 0.3);
+}
+
+/* Стили для кнопок навигации */
+.carousel-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(138, 43, 226, 0.3); /* Полупрозрачный фиолетовый */
+  border: 2px solid #8a2be2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+}
+
+.carousel-button:hover {
+  background: rgba(138, 43, 226, 0.7);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+}
+
+.carousel-button mat-icon {
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-button:hover mat-icon {
+  transform: scale(1.2);
+}
+
+/* Для неактивного состояния (если нужно) */
+.carousel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: rgba(138, 43, 226, 0.1);
+}
+
+

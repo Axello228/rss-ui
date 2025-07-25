@@ -1,0 +1,32 @@
+<section class="reviews-section">
+  <h2 class="section-title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+  
+  <div class="reviews-container"
+       (mousedown)="startDrag($event)"
+       (mousemove)="onDrag($event)"
+       (mouseup)="endDrag()"
+       (mouseleave)="endDrag()"
+       (touchstart)="startDrag($event.touches[0])"
+       (touchmove)="onDrag($event.touches[0])"
+       (touchend)="endDrag()">
+       
+    <div class="reviews-track" 
+         [style.transform]="'translateX(' + currentOffset + 'px)'"
+         [style.transition]="isDragging ? 'none' : 'transform 0.5s ease'">
+         
+      <div class="review-card" *ngFor="let review of reviews">
+        <div class="review-header">
+          <img [src]="review.avatar" [alt]="review.name" class="review-avatar">
+          <div>
+            <h3>{{review.name}}</h3>
+            <div class="review-rating">
+              <span *ngFor="let star of [1,2,3,4,5]">★</span>
+            </div>
+          </div>
+        </div>
+        <p class="review-text">{{review.text}}</p>
+        <div class="review-date">{{review.date}}</div>
+      </div>
+    </div>
+  </div>
+</section>

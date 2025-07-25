@@ -1,0 +1,107 @@
+<!-- В самое начало home.component.html -->
+<app-header></app-header>
+
+<!-- Основной контейнер -->
+<div class="home-page">
+<app-floating-button></app-floating-button>
+
+    <!-- Герой-баннер -->
+    <section class="hero-banner">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>МОЩНЫЕ ИГРОВЫЕ СБОРКИ</h1>
+      <section class="features-section">
+  <h2 class="features-title">Наши преимущества</h2>
+  <div class="features-list">
+    <div class="feature-item">
+      <span class="feature-icon">✓</span>
+      <span class="feature-text">Надёжные комплектующие</span>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">✓</span>
+      <span class="feature-text">Гарантия на свою продукцию</span>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">✓</span>
+      <span class="feature-text">Техническая поддержка</span>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">✓</span>
+      <span class="feature-text">Доставка по всей России</span>
+    </div>
+  </div>
+</section>
+    </div>
+    <div class="hero-image">
+      <img src="./assets/pc-bg.PNG" alt="Игровой компьютер">
+    </div>
+  </div>
+</section>
+
+    <!-- Блок статистики -->
+    <section class="stats">
+        <div class="stat-item">
+            <span class="number">2000+</span>
+            <span class="label">довольных клиентов</span>
+        </div>
+        <div class="stat-item">
+            <span class="number">3 дня</span>
+            <span class="label">доставка</span>
+        </div>
+        <div class="stat-item">
+            <span class="number">350 000+</span>
+            <span class="label">подписчиков на YouTube</span>
+        </div>
+    </section>
+
+    <div class="elements-container">
+      <!-- Кнопки CTA -->
+      <section class="cta-buttons">
+          <button class="btn-primary">Уточнить детали у менеджера</button>
+          <button class="btn-secondary">Оставить заявку</button>
+      </section>
+    
+      <app-carousel></app-carousel>
+    </div>
+
+    <style>
+  .elements-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+</style>
+
+<section class="advantages">
+  <div class="advantage-card">
+    <div class="advantage-icon">✓</div>
+    <h3 class="advantage-title">ГАРАНТИЯ</h3>
+    <p class="advantage-text">Мы даем гарантийное обслуживание на наши ПК и комплектующие.</p>
+  </div>
+
+  <div class="advantage-card">
+    <div class="advantage-icon">✆</div>
+    <h3 class="advantage-title">КОНСУЛЬТАЦИЯ</h3>
+    <p class="advantage-text">Предлагаем вам консультацию перед покупкой и во время эксплуатации.</p>
+  </div>
+
+  <div class="advantage-card">
+    <div class="advantage-icon">🛠</div>
+    <h3 class="advantage-title">ПРОФЕССИОНАЛИЗМ</h3>
+    <p class="advantage-text">Наша команда экспертов оперативно соберет ПК под ваши требования.</p>
+  </div>
+</section>
+
+<section id="products" class="products-section">
+  <!-- Ваши карточки товаров -->
+</section>
+
+<section id="advantages" class="advantages-section">
+  <app-how-we-work></app-how-we-work>
+</section>
+
+<section id="contacts" class="contacts-section">
+  <app-reviews></app-reviews>
+</section>
+
+</div>

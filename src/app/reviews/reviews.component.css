@@ -1,0 +1,92 @@
+.reviews-section {
+  background-color: #1a1a1a;
+  padding: 60px 20px;
+  color: white;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  color: #8a2be2;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.reviews-container {
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+}
+
+.reviews-container.grabbing {
+  cursor: grabbing;
+}
+
+.reviews-track {
+
+  height: 300px; /* Фиксированная высота */
+  display: flex;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.review-card {
+  border: 2px solid #8a2be2;
+  display: block !important;
+  min-width: 350px;
+  background: #252525 !important; 
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.review-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #8a2be2;
+}
+
+.review-rating {
+  color: #ffc107;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.review-date {
+  color: #8a2be2;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .review-card {
+    min-width: 280px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}

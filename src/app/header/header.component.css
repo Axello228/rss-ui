@@ -1,0 +1,60 @@
+/* header.component.css */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw; /* Ограничение по ширине экрана */
+  overflow: hidden;  /* Скрываем выходящий контент */
+  background-color: #121212;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; 
+  z-index: 1000;
+}
+
+.shop-name {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #8a2be2;
+}
+
+.top-links a {
+  color: #cccccc;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.top-links a:hover {
+  color: #8a2be2;
+}
+
+.header-nav a {
+  color: #ccc;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.header-nav a:hover {
+  color: #8a2be2;
+}
+
+.header-nav a.active {
+  color: #8a2be2;
+}
+
+.header-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #8a2be2;
+}

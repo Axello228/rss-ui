@@ -1,0 +1,24 @@
+<div class="carousel-container">
+  <div class="carousel-slide">
+    <div class="slide" >
+      <div class="text-content">
+        <h2>{{slides[currentSlide].titleLine1}}</h2>
+        <h3>{{slides[currentSlide].titleLine2}}</h3>
+        <p class="tagline">{{slides[currentSlide].tagline}}</p>
+      </div>
+      <img [src]="slides[currentSlide].image" [alt]="slides[currentSlide].titleLine1" class="slide-image">
+    </div>
+  </div>
+  
+  <div class="carousel-controls">
+  <button mat-mini-fab class="carousel-button" (click)="prevSlide()" 
+          aria-label="Previous slide">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  
+  <button mat-mini-fab class="carousel-button" (click)="nextSlide()" 
+          aria-label="Next slide">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
+</div>

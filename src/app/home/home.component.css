@@ -1,0 +1,297 @@
+/* Общие стили */
+.home-page {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a; /* Тёмно-серый фон */
+  color: white;
+  padding: 20px;
+}
+
+.hero-banner {
+  background-color: #1a1a1a; /* Тёмный фон */
+  padding: 60px 20px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+/* Текстовая часть */
+.hero-text {
+  flex: 1;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #8a2be2; /* Фиолетовый */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.features p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #cccccc;
+}
+
+.icon {
+  color: #8a2be2;
+  font-weight: bold;
+}
+
+/* Изображение */
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.hero-banner h1 {
+  font-size: 2.5rem;
+  color: #8a2be2; /* Фиолетовый акцент */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center; /* Горизонтальное центрирование */
+  margin: 0 auto; /* Автоматические отступы по бокам */
+  width: 100%; /* Ширина на весь контейнер */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.features p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cccccc;
+}
+
+.icon {
+  color: #8a2be2;
+  font-weight: bold;
+}
+
+/* Блок статистики */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.number {
+  display: block;
+  font-size: 2rem;
+  color: #8a2be2;
+  font-weight: bold;
+}
+
+.label {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+/* Кнопки */
+.cta-buttons {
+  text-align: center;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 30px;
+  margin: 0 10px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease; /* Плавное изменение свойств */
+}
+
+
+/* Основная кнопка (фиолетовая) */
+.btn-primary {
+  background-color: #8a2be2;
+  color: white;
+}
+
+/* Вторичная кнопка (прозрачная с фиолетовой рамкой) */
+.btn-secondary {
+  background: transparent;
+  color: #e1bee7;  /* Светло-фиолетовый текст */
+  border: 2px solid transparent;
+  background-clip: padding-box;  /* Чтобы градиент не залезал на рамку */
+  position: relative;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, #8a2be2, #e100ff);
+  z-index: -1;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Эффект при наведении на основную кнопку */
+.btn-primary:hover {
+  background-color: #6a1bb2; /* Тёмно-фиолетовый */
+  transform: scale(1.05); /* Лёгкое увеличение */
+}
+
+.btn-secondary:hover::before {
+  opacity: 1;
+}
+
+/* Эффект при наведении на вторичную кнопку */
+.btn-secondary:hover {
+  color: white;
+  border-color: transparent;
+}
+
+/* Тень при наведении (для обеих кнопок) */
+.btn-primary:hover, .btn-secondary:hover {
+  box-shadow: 0 4px 8px rgba(138, 43, 226, 0.3); /* Фиолетовая тень */
+}
+
+/* Анимация нажатия */
+.btn-primary:active, .btn-secondary:active {
+  transform: scale(0.98); /* Лёгкое сжатие */
+}
+
+.hero-banner {
+  margin-top: 60px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-section {
+  padding: 40px 20px;
+  background-color: #1a1a1a;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-title {
+  color: #8a2be2;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+.feature-icon {
+  color: #8a2be2;
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 25px;
+  text-align: center;
+}
+
+.feature-text {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advantage-card {
+  flex: 1;
+  min-width: 280px;
+  background: #252525;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.advantage-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
+}
+
+.advantage-icon {
+  font-size: 2.5rem;
+  color: #8a2be2;
+  margin-bottom: 20px;
+}
+
+.advantage-title {
+  color: #8a2be2;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.advantage-text {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .advantages {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  
+  .advantage-card {
+    min-width: 100%;
+  }
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 5%;
+  background-color: #1a1a1a;
+  max-width: 1400px;
+  margin: 0 auto;
+}

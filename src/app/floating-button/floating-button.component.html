@@ -1,0 +1,39 @@
+<div class="floating-container">
+  <!-- Основная кнопка -->
+  <div class="main-button" (click)="toggleMenu()">
+    <img src="assets/images/chat-icon.png" 
+         alt="Чат с нами" 
+         class="chat-icon"
+         [class.open]="isOpen">
+  </div>
+  
+  <!-- Всплывающие кнопки соцсетей -->
+  <div class="sub-buttons" [class.open]="isOpen">
+    <a href="https://vk.com/your_page" 
+       target="_blank" 
+       class="sub-button vk"
+       aria-label="Наша страница ВКонтакте">
+      <img src="assets/images/vk-icon.png" 
+           alt="VK" 
+           class="social-icon">
+    </a>
+    
+    <a href="https://t.me/your_channel" 
+       target="_blank" 
+       class="sub-button tg"
+       aria-label="Наш Telegram канал">
+      <img src="assets/images/tg-icon.png" 
+           alt="Telegram" 
+           class="social-icon">
+    </a>
+    
+    <a href="https://wa.me/your_number" 
+       target="_blank" 
+       class="sub-button whatsapp"
+       aria-label="Написать в WhatsApp">
+      <img src="assets/images/wa-icon.png" 
+           alt="WhatsApp" 
+           class="social-icon">
+    </a>
+  </div>
+</div>

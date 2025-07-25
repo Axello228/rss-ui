@@ -1,0 +1,14 @@
+<div class="product-card">
+  <div class="product-image-container">
+    <img [src]="productImage" [alt]="productTitle" class="product-image" (load)="onImageLoad()">
+    <div class="image-placeholder" *ngIf="!imageLoaded"></div>
+  </div>
+  
+  <h3 class="product-title">{{productTitle}}</h3>
+  <p class="product-price">{{productPrice}} ₽</p>
+  
+  <div class="product-actions">
+    <button class="details-btn">ПОДРОБНЕЕ</button>
+    <button class="order-btn">ЗАКАЗАТЬ</button>
+  </div>
+</div>
