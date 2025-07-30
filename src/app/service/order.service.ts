@@ -7,9 +7,25 @@ import { Observable } from "rxjs";
     providedIn: 'root',
 })
 export class OrderService {
-    constructor(private http: HttpClient){}
+    constructor(private http: HttpClient) { }
 
     saveOrder(order: Orders): Observable<any> {
         return this.http.post('http://localhost:3000/orders', order);
     }
+
+    getOrders(): Observable<any> {
+        return this.http.get<any>('http://localhost:3000/orders');
+    }
+
+    formatDate(dateString: string): string {
+        const date = new Date(dateString);
+        return date
+            .toLocaleString('ru-RU', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+            })
+            .slice(0, -2);
+    }
+
 }
